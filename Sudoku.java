@@ -8,7 +8,7 @@ public class Sudoku {
 		for(int i=0; i<size;i++ ){
 			ans=false;
 			for(int j=0; j<size && !ans; j++) {
-				if(i==x[j]) {
+				if(i+1==x[j]) {
 					ans=true;
 				}
 			}
@@ -40,7 +40,7 @@ public class Sudoku {
 			ans=false;
 			for(int j=0; j<size; j++) {
 				for(int t=0; t< size; t++) {
-					if(i==x[j][t]) {
+					if(i+1==x[j][t]) {
 						ans=true;
 					}
 				}
