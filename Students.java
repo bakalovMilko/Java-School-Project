@@ -1,8 +1,8 @@
 package ObjectOrientedProgramming;
 
 public class Students {
-	public double average=5;
-	public String name;
+	private double grade=5;
+	private String name ="gosho";
 	
 	Students(){		
 	}
@@ -10,10 +10,16 @@ public class Students {
 		this.name=name;
 		this.grade=grade;
 	}
-	public void getName(String newName) {
+	public void setName(String newName) {
 		name=newName;
 	}
-	public void getGrade(double newGrade) {
+	public void setGrade(double newGrade) {
 		grade=newGrade;
+	}
+	public String getName() {
+		return name;
+	}
+	public double getGrade() {
+		return grade;
 	}
 }
