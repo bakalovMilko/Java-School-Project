@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class StudentsTest {
 	public static boolean scholarship (Students student) {
 		final double scholarship = 5.5;
-		if(student.grade>scholarship)  return true;
+		if(student.getGrade()>scholarship)  return true;
 		else return false;
 	}
 	public static void scholarship(Students students[]) {
 		for(Students s:students) {
-			if(scholarship(s)) System.out.println(s.name);
+			if(scholarship(s)) System.out.println(s.getName());
 		}
 	}
 
