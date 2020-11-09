@@ -46,7 +46,7 @@ public class RegularPolygon {
 	}
 	
 	public double getPerimeter() {
-		return n*sideLength;
+		return (int)(n*sideLength*100)/100.0;
 	}
 	public double getArea() {
 		return (int)((n*sideLength*sideLength)/(4*Math.tan(Math.PI/n))*100)/100.0;
