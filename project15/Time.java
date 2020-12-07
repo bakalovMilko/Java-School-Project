@@ -9,9 +9,9 @@ public class Time {
 	
 	Time(){
 		Date date = new Date();
-		hours= (int)((date.getTime() % 86400000)/3600000);
-		minutes = (int)((date.getTime()%3600000)/60000);
-		seconds = (int)((date.getTime()%60000)/1000);
+		this.setHours((int)((date.getTime() % 86400000)/3600000));
+		this.setMinutes ((int)((date.getTime()%3600000)/60000));
+		this.setSeconds ((int)((date.getTime()%60000)/1000));
 	}
 	Time(int miliSec){
 		this.setHours((int)((miliSec % 86400000)/3600000));
@@ -28,16 +28,16 @@ public class Time {
 		return hours;
 	}
 	public void setHours(int hours) {
-		this.hours = hours;
+		this.hours = hours%24;
 	}
 	public int getMinutes() {
 		return minutes;
 	}
 	public void setMinutes(int minutes) {
-		this.minutes = minutes;
+		this.minutes = minutes%60;
 	}
 	public int getSeconds() {
-		return seconds;
+		return seconds%60;
 	}
 	public void setSeconds(int seconds) {
 		this.seconds = seconds;
