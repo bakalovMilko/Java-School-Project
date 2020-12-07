@@ -2,8 +2,9 @@ package project17;
 
 public class Trainer {
 	private String name;
-	private ChessPlayer[] students = new ChessPlayer[20];
+	private ChessPlayer[] students = new ChessPlayer[PLAYERS_PER_TRAINER];
 	private int numberOfStudents = 0;
+	private static final double PLAYERS_PER_TRAINER=20;
 	
 	Trainer(String name){
 		this.setName(name);
@@ -27,7 +28,7 @@ public class Trainer {
 			if(students[i]==player) found = true;
 		}
 		if(!found) {
-			if(numberOfStudents<20) {
+			if(numberOfStudents<PLAYERS_PER_TRAINER) {
 				students[numberOfStudents] = player;
 				numberOfStudents++;
 				player.addTrainer(this);
@@ -46,8 +47,5 @@ public class Trainer {
 			numberOfStudents--;
 			player.dropTrainer(this);
 		}
-		/*else {
-			System.out.println("There is no such student.");
-		}*/
 	}
 }
