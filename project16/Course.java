@@ -21,16 +21,16 @@ public class Course {
 		return students;
 	}
 
-	/*public void setStudents(String[] students) {
+	private void setStudents(String[] students) {
 		this.students = students;
-	}*/
+	}
 
 	public int getNumberOfStudents() {
 		return numberOfStudents;
 	}
-	/*public void setNumberOfStudents(int numberOfStudents) {
+	private void setNumberOfStudents(int numberOfStudents) {
 		this.numberOfStudents= numberOfStudents;
-	}*/
+	}
 	
 	public void addStudent(String name) {
 		students[numberOfStudents]=name;
@@ -46,7 +46,7 @@ public class Course {
 				students[i] = students[i+1];
 			}
 		}
-		if(found && numberOfStudents>=0) numberOfStudents--;
+		if(found && numberOfStudents>0) numberOfStudents--;
 	}
 	
 }
