@@ -4,6 +4,7 @@ public class NationalTeam {
 	private String nationality;
 	private ChessPlayer[] players = new ChessPlayer[6];
 	private int numberOfSelectedPlayers=0;
+	private static final int PLAYERS_PER_TEAM=6;
 	
 	NationalTeam(String nationality){
 		this.setNationality(nationality);
@@ -22,7 +23,7 @@ public class NationalTeam {
 	}
 	
 	public void addPlayer(ChessPlayer player) {
-		if(numberOfSelectedPlayers<6) {
+		if(numberOfSelectedPlayers<PLAYERS_PER_TEAM) {
 			players[numberOfSelectedPlayers] = player;
 			numberOfSelectedPlayers++;
 		}
