@@ -2,9 +2,10 @@ package project17;
 
 public class ChessPlayer {
 	private String name;
-	private Trainer[] trainers = new Trainer[6];
+	private Trainer[] trainers = new Trainer[TRAINERS_PER_PLAYER];
 	private Rating rating;
 	private int numberOfTrainers = 0;
+	private static final int TRAINERS_PER_PLAYER = 6;
 	
 	ChessPlayer(String name, int rating){
 		this.name = name;
@@ -39,7 +40,7 @@ public class ChessPlayer {
 			if(trainers[i]==trainer) found = true;
 		}
 		if(!found) {
-			if(numberOfTrainers<6) {
+			if(numberOfTrainers<TRAINERS_PER_PLAYER) {
 				trainers[numberOfTrainers] = trainer;
 				numberOfTrainers++;
 				trainer.addStudent(this);
@@ -58,9 +59,6 @@ public class ChessPlayer {
 			numberOfTrainers--;
 			trainer.dropStudent(this);
 		}
-		/*else {
-			System.out.println("There is no such student.");
-		}*/
 	}
 	
 }
