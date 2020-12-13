@@ -46,7 +46,7 @@ public class Triangle extends GeometricObject {
 	}
 	
 	public double getArea() {
-		double area = Math.pow((side1+side2+side3)*(side1+side2-side3)*(side1-side2+side3)*(-side1+side2+side3), 0.25)/4;
+		double area = Math.pow((side1+side2+side3)*(side1+side2-side3)*(side1-side2+side3)*(-side1+side2+side3), 0.5)/4;
 		return (int)(area*100)/100.0;
 	}
 	public double getPerimeter() {
